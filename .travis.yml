@@ -17,8 +17,8 @@ addons:
 
 script:
   - |
-    if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then exit 0; fi;
-    if [[ "$TRAVIS_BRANCH" != "add_deploy_script_for_website"  && ! "$TRAVIS_BRANCH" =~ ^v[[:digit:]]+\.[[:digit:]]+(\.[[:digit:]]+)?(-\S*)?$ ]]; then echo "not develop branch, no deploy"; exit 0; fi;
+#    if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then exit 0; fi;
+#    if [[ "$TRAVIS_BRANCH" != "add_deploy_script_for_website"  && ! "$TRAVIS_BRANCH" =~ ^v[[:digit:]]+\.[[:digit:]]+(\.[[:digit:]]+)?(-\S*)?$ ]]; then echo "not develop branch, no deploy"; exit 0; fi;
     export DEPLOY_DOCS_SH=https://raw.githubusercontent.com/PaddlePaddle/PaddlePaddle.org/master/scripts/deploy/deploy_docs.sh
     export MOBILE_DIR=`pwd`
     cd ..
